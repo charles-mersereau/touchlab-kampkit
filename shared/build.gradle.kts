@@ -1,4 +1,5 @@
 plugins {
+    id("maven-publish")
     kotlin("multiplatform")
     id("co.touchlab.native.cocoapods")
     id("kotlinx-serialization")
