@@ -25,8 +25,8 @@ android {
 kotlin {
     android()
     // Revert to just ios() when gradle plugin can properly resolve it
-    val onPhone = System.getenv("SDK_NAME")?.startsWith("iphoneos") ?: false
-    if (onPhone) {
+    val onIPhone = System.getenv("SDK_NAME")?.startsWith("iphoneos") ?: false
+    if (onIPhone) {
         iosArm64("ios")
     } else {
         iosX64("ios")

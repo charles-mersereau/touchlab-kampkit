@@ -31,6 +31,7 @@ allprojects {
         //maven(url = "https://dl.bintray.com/ekito/koin") TODO: revert when Koin is available
         maven(url = "https://dl.bintray.com/touchlabpublic/kotlin")
         maven(url = "https://oss.sonatype.org/content/repositories/snapshots/")
+        maven(url = "https://plugins.gradle.org/m2/")
     }
 }
 
