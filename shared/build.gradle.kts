@@ -24,7 +24,9 @@ android {
 }
 
 kotlin {
-    android()
+    android() {
+        publishLibraryVariants("release", "debug")
+    }
     // Revert to just ios() when gradle plugin can properly resolve it
     val onIPhone = System.getenv("SDK_NAME")?.startsWith("iphoneos") ?: false
     if (onIPhone) {
@@ -45,7 +47,7 @@ kotlin {
     }
 
     sourceSets["commonMain"].dependencies {
-        implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+        // implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
         implementation(kotlin("stdlib-common", Versions.kotlin))
         implementation(Deps.SqlDelight.runtime)
         implementation(Deps.Ktor.commonCore)
