@@ -45,6 +45,7 @@ kotlin {
     }
 
     sourceSets["commonMain"].dependencies {
+        implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
         implementation(kotlin("stdlib-common", Versions.kotlin))
         implementation(Deps.SqlDelight.runtime)
         implementation(Deps.Ktor.commonCore)
@@ -110,6 +111,7 @@ kotlin {
         }
     }
 }
+
 
 sqldelight {
     database("KaMPKitDb") {
